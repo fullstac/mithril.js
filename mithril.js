@@ -504,6 +504,7 @@ var m = (function app(window, undefined) {
 	var nodeCache = [], cellCache = {};
 	m.render = function(root, cell, forceRecreation) {
 		var configs = [];
+		if (cell === false) return;
 		if (!root) throw new Error("Ensure the DOM element being passed to m.route/m.mount/m.render is not undefined.");
 		var id = getCellCacheKey(root);
 		var isDocumentRoot = root === $document;
