@@ -456,6 +456,7 @@ var m = (function app(window, undefined) {
 	var nodeCache = [], cellCache = {};
 	m.render = function(root, cell, forceRecreation) {
 		var configs = [];
+		if (cell === false) return;
 		if (!root) throw new Error("Please ensure the DOM element exists before rendering a template into it.");
 		var id = getCellCacheKey(root);
 		var isDocumentRoot = root === $document;
