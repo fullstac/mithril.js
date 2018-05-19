@@ -1,1 +1,3 @@
-* text eol=crlf
+* text=auto
+/mithril.js binary
+/mithril.min.js binary
