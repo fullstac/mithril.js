@@ -973,6 +973,7 @@ var coreRenderer = function($window) {
 		return false
 	}
 	function render(dom, vnodes) {
+		if (dom === false) return;
 		if (!dom) throw new Error("Ensure the DOM element being passed to m.route/m.mount/m.render is not undefined.")
 		var hooks = []
 		var active = $doc.activeElement
@@ -1039,9 +1040,9 @@ var _16 = function(redrawService0) {
 			redrawService0.unsubscribe(root)
 			return
 		}
-		
+
 		if (component.view == null && typeof component !== "function") throw new Error("m.mount(element, component) expects a component, not a vnode")
-		
+
 		var run0 = function() {
 			redrawService0.render(root, Vnode(component))
 		}
