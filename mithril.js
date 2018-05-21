@@ -1255,4 +1255,4 @@ m.version = "1.1.6"
 m.vnode = Vnode
 if (typeof module !== "undefined") module["exports"] = m
 else window.m = m
-}());
+}(typeof window != "undefined" ? window : {}));
