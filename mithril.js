@@ -973,7 +973,7 @@ var coreRenderer = function($window) {
 		return false
 	}
 	function render(dom, vnodes) {
-		if (dom === false) return;
+		if (!vnodes) return;
 		if (!dom) throw new Error("Ensure the DOM element being passed to m.route/m.mount/m.render is not undefined.")
 		var hooks = []
 		var active = $doc.activeElement
