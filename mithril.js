@@ -1,4 +1,4 @@
-;(function(window) {
+;(function() {
 "use strict"
 function Vnode(tag, key, attrs0, children, text, dom) {
 	return {tag: tag, key: key, attrs: attrs0, children: children, text: text, dom: dom, domSize: undefined, state: undefined, _state: undefined, events: undefined, instance: undefined, skip: false}
@@ -1255,4 +1255,4 @@ m.version = "1.1.6"
 m.vnode = Vnode
 if (typeof module !== "undefined") module["exports"] = m
 else window.m = m
-}(typeof window != "undefined" ? window : {}));
+}());
